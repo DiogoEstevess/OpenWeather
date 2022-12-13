@@ -10,9 +10,11 @@
 </head>
 
 <body>
+  <div class="cabecalho">
   <?php
   include('../includes/logo.php');
   ?>
+  </div>
 
   <?php
   include('../includes/footer.php');
