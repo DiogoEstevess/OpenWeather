@@ -12,7 +12,6 @@
 <body>
   <?php
   include('../includes/logo.php');
-  
   ?>
 </body>
 
