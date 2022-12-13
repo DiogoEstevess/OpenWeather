@@ -11,7 +11,7 @@
 
 <body>
   <?php
-  include('../indludes/logo.php');
+  include('../includes/logo.php');
   ?>
 </body>
 
