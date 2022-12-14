@@ -1,9 +1,9 @@
 .rodape{
     position: absolute;
     bottom: 0;
-    background-color: blue;
+    background-color: rgb(1, 122, 252);
     color: #FFF;
     width: 100%;
-    height: 100px;    
+    height: 40px;    
     text-align: center;
 }
