@@ -15,6 +15,13 @@
     text-align: center;
 }
 
+.quadrado{
+    background-color: rgb(57, 57, 57);
+    width: 300px;
+    border: 10px solid rgb(0, 0, 0);
+    padding: 50px;
+}
+
 body{
     background-color: #dddddd;
 }
