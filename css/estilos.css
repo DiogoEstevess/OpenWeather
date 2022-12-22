@@ -1,5 +1,5 @@
 .cabecalho {
-    position: fixed;
+    position: absolute;
     width: 100%;
 }
 
@@ -16,13 +16,19 @@
 }
 
 .quadrado{
-    margin-top: 10px;
-    background-color: rgb(57, 57, 57);
-    width: 300px;
+    background-color: #a4a5a6;
+    width: 320px;
+    padding: 20px;
     border: 10px solid rgb(0, 0, 0);
-    padding: 50px;
+    margin: 50px;
+    
 }
 
 body{
     background-color: #dddddd;
 }
+
+.row{
+    justify-content: center;
+}
+
