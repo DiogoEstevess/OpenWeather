@@ -36,9 +36,9 @@ let weather = {
   },
 };
 
-document.querySelector(".d-flex button").addEventListener("click", function () {
-  weather.search();
-});
+// document.querySelector(".d-flex button").addEventListener("click", function () {
+//   weather.search();
+// });
 
 // document.querySelector("#pesquisa").addEventListener("keyup", function (event) {
 //     if (event.key == "Enter") {
