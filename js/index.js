@@ -96,8 +96,9 @@ let weather = {
     document.querySelector(".temperatura1").innerText = temp + "°C";
     document.querySelector(".humidade1").innerText = "Humidade: " + humidity + "%";
     document.querySelector(".vento1").innerText = "Vento: " + speed + " km/h";
+    document.querySelector(".quadrado").src = "https://source.unsplash.com/1600x900/?" + name;
   },
-  
+
   displayWeather2: function (data) {
     const { name } = data;
     const { icon, description } = data.weather[0];
@@ -110,7 +111,7 @@ let weather = {
     document.querySelector(".humidade2").innerText = "Humidade: " + humidity + "%";
     document.querySelector(".vento2").innerText = "Vento: " + speed + " km/h";
   },
-  
+
   displayWeather3: function (data) {
     const { name } = data;
     const { icon, description } = data.weather[0];
@@ -123,7 +124,7 @@ let weather = {
     document.querySelector(".humidade3").innerText = "Humidade: " + humidity + "%";
     document.querySelector(".vento3").innerText = "Vento: " + speed + " km/h";
   },
-  
+
   displayWeather4: function (data) {
     const { name } = data;
     const { icon, description } = data.weather[0];
@@ -136,7 +137,7 @@ let weather = {
     document.querySelector(".humidade4").innerText = "Humidade: " + humidity + "%";
     document.querySelector(".vento4").innerText = "Vento: " + speed + " km/h";
   },
-  
+
   displayWeather5: function (data) {
     const { name } = data;
     const { icon, description } = data.weather[0];
@@ -149,7 +150,7 @@ let weather = {
     document.querySelector(".humidade5").innerText = "Humidade: " + humidity + "%";
     document.querySelector(".vento5").innerText = "Vento: " + speed + " km/h";
   },
-  
+
   displayWeather6: function (data) {
     const { name } = data;
     const { icon, description } = data.weather[0];
@@ -162,7 +163,7 @@ let weather = {
     document.querySelector(".humidade6").innerText = "Humidade: " + humidity + "%";
     document.querySelector(".vento6").innerText = "Vento: " + speed + " km/h";
   },
-  
+
 };
 
 weather.fetchWeather1()
