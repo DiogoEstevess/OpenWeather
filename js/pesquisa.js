@@ -26,9 +26,6 @@ let weather = {
     document.querySelector(".temperatura").innerText = temp + "°C";
     document.querySelector(".humidade").innerText = "Humidade: " + humidity + "%";
     document.querySelector(".vento").innerText = "Vento: " + speed + " km/h";
-    document.querySelector(".quadrado").classList.remove("loading");
-    //   document.body.style.backgroundImage =
-    //     "url('https://source.unsplash.com/1600x900/?" + name + "')";
   },
 
   search: function () {
