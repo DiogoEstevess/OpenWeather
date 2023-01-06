@@ -88,7 +88,7 @@ let weather = {
   displayWeather1: function (data) {
     const { name } = data;
     const { icon, description } = data.weather[0];
-    const { temp, humidity } = data.main;
+    const { temp, pressure, humidity } = data.main;
     const { speed } = data.wind;
     document.querySelector(".cidade1").innerText = name;
     document.querySelector(".icon1").src = "https://openweathermap.org/img/wn/" + icon + ".png";
@@ -96,13 +96,13 @@ let weather = {
     document.querySelector(".temperatura1").innerText = temp + "°C";
     document.querySelector(".humidade1").innerText = "Humidade: " + humidity + "%";
     document.querySelector(".vento1").innerText = "Vento: " + speed + " km/h";
-    document.querySelector(".quadrado").src = "https://source.unsplash.com/1600x900/?" + name;
+    document.querySelector(".pressao1").innerHTML = "Pressão Atmosférica: " + pressure + "hPa";
   },
 
   displayWeather2: function (data) {
     const { name } = data;
     const { icon, description } = data.weather[0];
-    const { temp, humidity } = data.main;
+    const { temp, pressure, humidity } = data.main;
     const { speed } = data.wind;
     document.querySelector(".cidade2").innerText = name;
     document.querySelector(".icon2").src = "https://openweathermap.org/img/wn/" + icon + ".png";
@@ -110,12 +110,13 @@ let weather = {
     document.querySelector(".temperatura2").innerText = temp + "°C";
     document.querySelector(".humidade2").innerText = "Humidade: " + humidity + "%";
     document.querySelector(".vento2").innerText = "Vento: " + speed + " km/h";
+    document.querySelector(".pressao2").innerHTML = "Pressão Atmosférica: " + pressure + "hPa";
   },
 
   displayWeather3: function (data) {
     const { name } = data;
     const { icon, description } = data.weather[0];
-    const { temp, humidity } = data.main;
+    const { temp, pressure, humidity } = data.main;
     const { speed } = data.wind;
     document.querySelector(".cidade3").innerText = name;
     document.querySelector(".icon3").src = "https://openweathermap.org/img/wn/" + icon + ".png";
@@ -123,12 +124,13 @@ let weather = {
     document.querySelector(".temperatura3").innerText = temp + "°C";
     document.querySelector(".humidade3").innerText = "Humidade: " + humidity + "%";
     document.querySelector(".vento3").innerText = "Vento: " + speed + " km/h";
+    document.querySelector(".pressao3").innerHTML = "Pressão Atmosférica: " + pressure + "hPa";
   },
 
   displayWeather4: function (data) {
     const { name } = data;
     const { icon, description } = data.weather[0];
-    const { temp, humidity } = data.main;
+    const { temp, pressure, humidity } = data.main;
     const { speed } = data.wind;
     document.querySelector(".cidade4").innerText = name;
     document.querySelector(".icon4").src = "https://openweathermap.org/img/wn/" + icon + ".png";
@@ -136,12 +138,13 @@ let weather = {
     document.querySelector(".temperatura4").innerText = temp + "°C";
     document.querySelector(".humidade4").innerText = "Humidade: " + humidity + "%";
     document.querySelector(".vento4").innerText = "Vento: " + speed + " km/h";
+    document.querySelector(".pressao4").innerHTML = "Pressão Atmosférica: " + pressure + "hPa";
   },
 
   displayWeather5: function (data) {
     const { name } = data;
     const { icon, description } = data.weather[0];
-    const { temp, humidity } = data.main;
+    const { temp, pressure, humidity } = data.main;
     const { speed } = data.wind;
     document.querySelector(".cidade5").innerText = name;
     document.querySelector(".icon5").src = "https://openweathermap.org/img/wn/" + icon + ".png";
@@ -149,12 +152,13 @@ let weather = {
     document.querySelector(".temperatura5").innerText = temp + "°C";
     document.querySelector(".humidade5").innerText = "Humidade: " + humidity + "%";
     document.querySelector(".vento5").innerText = "Vento: " + speed + " km/h";
+    document.querySelector(".pressao5").innerHTML = "Pressão Atmosférica: " + pressure + "hPa";
   },
 
   displayWeather6: function (data) {
     const { name } = data;
     const { icon, description } = data.weather[0];
-    const { temp, humidity } = data.main;
+    const { temp, pressure, humidity } = data.main;
     const { speed } = data.wind;
     document.querySelector(".cidade6").innerText = name;
     document.querySelector(".icon6").src = "https://openweathermap.org/img/wn/" + icon + ".png";
@@ -162,6 +166,7 @@ let weather = {
     document.querySelector(".temperatura6").innerText = temp + "°C";
     document.querySelector(".humidade6").innerText = "Humidade: " + humidity + "%";
     document.querySelector(".vento6").innerText = "Vento: " + speed + " km/h";
+    document.querySelector(".pressao6").innerHTML = "Pressão Atmosférica: " + pressure + "hPa";
   },
 
 };
