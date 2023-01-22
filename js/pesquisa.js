@@ -37,14 +37,16 @@
 
 function Obter_Cidade() {
   alert("Estou aqui..........");
-  let cidade = document.getElementById('#barra_pesquisa'); /*$('barra_pesquisa').val();*/
-  alert("A cidade inserida foi: " + cidade);
+  var cidade = document.getElementById('barra_pesquisa'); /*$('barra_pesquisa').val();*/
+
+  alert("A cidade inserida foi: " + cidade.value);
+
   let weather = {
     apiKey: "74d90f8a0dc103698bf1cb634e5dc227",
-  
+
     fetchWeather: function (city) {
       fetch(
-        "https://api.openweathermap.org/data/2.5/weather?q=" + cidade + "&units=metric&appid=" + this.apiKey + "&lang=pt"
+        "https://api.openweathermap.org/data/2.5/weather?q=" + cidade.value + "&units=metric&appid=" + this.apiKey + "&lang=pt"
       )
         .then((response) => {
           if (!response.ok) {
@@ -55,7 +57,7 @@ function Obter_Cidade() {
         })
         .then((data) => this.displayWeather(data));
     },
-    
+
     displayWeather: function (data) {
       const { name } = data;
       const { icon, description } = data.weather[0];
