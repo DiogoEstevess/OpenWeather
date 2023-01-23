@@ -15,7 +15,6 @@
 </head>
 
 <body>
-
   <div class="cabecalho">
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
@@ -25,22 +24,32 @@
           </ul>
           <button class="btn btn-primary me-2" type="submit">Cº/Fº</button>
           <form class="d-flex">
-              <a href="favoritos.html" class="btn btn-primary me-2">Favoritos</a>
-              <a href="pesquisa.html" class="btn btn-primary me-2">Pesquisa</a>
-              <!-- <input class="form-control me-2" type="text" id="pesquisa" placeholder="Cidade">
-              <button class="btn btn-outline-success" type="submit">Pesquisar</button> -->
+            <a href="favoritos.html" class="btn btn-primary me-2">Favoritos</a>
+            <a href="pesquisa.html" class="btn btn-primary me-2">Pesquisa</a>
           </form>
         </div>
     </nav>
-    <div class="tabelas">
-
+    <div class="row" id="cidade">
+      <div class="quadrado">
+        <h2 class="cidade"></h2>
+        <div class="temperatura"></div>
+        <div class="flex">
+          <img src="" alt="" class="icon" />
+          <div class="descricao"></div>
+        </div>
+        <div class="humidade"></div>
+        <div class="vento"></div>
+        <a href="detalhes.html" class=" btn-default">Ver detalhes</a>
+      </div>
+    </div>
+    <!-- <div class="tabelas">
       <h2 class="cidade">Tempo Lisboa</h2>
-
-
       <table>
         <tr>
           <td>Temperatura</td>
-          <td><div class="temperatura">51º</div></td>
+          <td>
+            <div class="temperatura">51º</div>
+          </td>
           <td>Maria Anders</td>
           <td>Germany</td>
           <td>UK</td>
@@ -48,7 +57,9 @@
         </tr>
         <tr>
           <td>Nuvens</td>
-          <td><div class="descricao">nuvens</div></td>
+          <td>
+            <div class="descricao">nuvens</div>
+          </td>
           <td>Francisco Chang</td>
           <td>Mexico</td>
           <td>UK</td>
@@ -56,7 +67,9 @@
         </tr>
         <tr>
           <td>Humidade</td>
-          <td><div class="humidade">60%</div></td>
+          <td>
+            <div class="humidade">60%</div>
+          </td>
           <td>Roland Mendel</td>
           <td>Austria</td>
           <td>UK</td>
@@ -64,15 +77,15 @@
         </tr>
         <tr>
           <td>Vento</td>
-          <td><div class="vento">2km/h</div></td>
+          <td>
+            <div class="vento">2km/h</div>
+          </td>
           <td>Helen Bennett</td>
           <td>UK</td>
           <td>UK</td>
         </tr>
       </table>
-
-    </div>
-
+    </div> -->
   </div>
 </body>
 
