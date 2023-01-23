@@ -3,7 +3,7 @@ let weather = {
 
   fetchWeather1: function (city) {
     fetch(
-      "https://api.openweathermap.org/data/2.5/weather?q=Lisboa&units=metric&appid=" + this.apiKey + "&lang=pt"
+      "https://api.openweathermap.org/data/2.5/weather?q=Alcochete&units=metric&appid=" + this.apiKey + "&lang=pt"
     )
       .then((response) => {
         if (!response.ok) {
@@ -17,7 +17,7 @@ let weather = {
 
   fetchWeather2: function (city) {
     fetch(
-      "https://api.openweathermap.org/data/2.5/weather?q=Algarve&units=metric&appid=" + this.apiKey + "&lang=pt"
+      "https://api.openweathermap.org/data/2.5/weather?q=Coimbra&units=metric&appid=" + this.apiKey + "&lang=pt"
     )
       .then((response) => {
         if (!response.ok) {
@@ -45,7 +45,7 @@ let weather = {
 
   fetchWeather4: function (city) {
     fetch(
-      "https://api.openweathermap.org/data/2.5/weather?q=Porto&units=metric&appid=" + this.apiKey + "&lang=pt"
+      "https://api.openweathermap.org/data/2.5/weather?q=Braga&units=metric&appid=" + this.apiKey + "&lang=pt"
     )
       .then((response) => {
         if (!response.ok) {
@@ -59,7 +59,7 @@ let weather = {
 
   fetchWeather5: function (city) {
     fetch(
-      "https://api.openweathermap.org/data/2.5/weather?q=Minho&units=metric&appid=" + this.apiKey + "&lang=pt"
+      "https://api.openweathermap.org/data/2.5/weather?q=Faro&units=metric&appid=" + this.apiKey + "&lang=pt"
     )
       .then((response) => {
         if (!response.ok) {
@@ -73,7 +73,7 @@ let weather = {
 
   fetchWeather6: function (city) {
     fetch(
-      "https://api.openweathermap.org/data/2.5/weather?q=Funchal&units=metric&appid=" + this.apiKey + "&lang=pt"
+      "https://api.openweathermap.org/data/2.5/weather?q=Sintra&units=metric&appid=" + this.apiKey + "&lang=pt"
     )
       .then((response) => {
         if (!response.ok) {
@@ -88,12 +88,14 @@ let weather = {
   displayWeather1: function (data) {
     const { name } = data;
     const { icon, description } = data.weather[0];
-    const { temp, pressure, humidity } = data.main;
+    const { temp, pressure, humidity, temp_min, temp_max } = data.main;
     const { speed } = data.wind;
     document.querySelector(".cidade1").innerText = name;
     document.querySelector(".icon1").src = "https://openweathermap.org/img/wn/" + icon + ".png";
     document.querySelector(".descricao1").innerText = description;
-    document.querySelector(".temperatura1").innerText = temp + "°C";
+    document.querySelector(".temperatura1").innerText = "Temperatura atual: " +  temp + "°C";
+    document.querySelector(".minimo1").innerText = "Temperatura mínima: " +  temp_min + "°C";
+    document.querySelector(".maximo1").innerText = "Temperatura máxima: " +  temp_max + "°C";
     document.querySelector(".humidade1").innerText = "Humidade: " + humidity + "%";
     document.querySelector(".vento1").innerText = "Vento: " + speed + " km/h";
     document.querySelector(".pressao1").innerHTML = "Pressão Atmosférica: " + pressure + "hPa";
@@ -102,12 +104,14 @@ let weather = {
   displayWeather2: function (data) {
     const { name } = data;
     const { icon, description } = data.weather[0];
-    const { temp, pressure, humidity } = data.main;
+    const { temp, pressure, humidity, temp_min, temp_max } = data.main;
     const { speed } = data.wind;
     document.querySelector(".cidade2").innerText = name;
     document.querySelector(".icon2").src = "https://openweathermap.org/img/wn/" + icon + ".png";
     document.querySelector(".descricao2").innerText = description;
-    document.querySelector(".temperatura2").innerText = temp + "°C";
+    document.querySelector(".temperatura2").innerText = "Temperatura atual: " +  temp + "°C";
+    document.querySelector(".minimo2").innerText = "Temperatura mínima: " +  temp_min + "°C";
+    document.querySelector(".maximo2").innerText = "Temperatura máxima: " +  temp_max + "°C";
     document.querySelector(".humidade2").innerText = "Humidade: " + humidity + "%";
     document.querySelector(".vento2").innerText = "Vento: " + speed + " km/h";
     document.querySelector(".pressao2").innerHTML = "Pressão Atmosférica: " + pressure + "hPa";
@@ -116,12 +120,14 @@ let weather = {
   displayWeather3: function (data) {
     const { name } = data;
     const { icon, description } = data.weather[0];
-    const { temp, pressure, humidity } = data.main;
+    const { temp, pressure, humidity, temp_min, temp_max } = data.main;
     const { speed } = data.wind;
     document.querySelector(".cidade3").innerText = name;
     document.querySelector(".icon3").src = "https://openweathermap.org/img/wn/" + icon + ".png";
     document.querySelector(".descricao3").innerText = description;
-    document.querySelector(".temperatura3").innerText = temp + "°C";
+    document.querySelector(".temperatura3").innerText = "Temperatura atual: " +  temp + "°C";
+    document.querySelector(".minimo3").innerText = "Temperatura mínima: " +  temp_min + "°C";
+    document.querySelector(".maximo3").innerText = "Temperatura máxima: " +  temp_max + "°C";
     document.querySelector(".humidade3").innerText = "Humidade: " + humidity + "%";
     document.querySelector(".vento3").innerText = "Vento: " + speed + " km/h";
     document.querySelector(".pressao3").innerHTML = "Pressão Atmosférica: " + pressure + "hPa";
@@ -130,12 +136,14 @@ let weather = {
   displayWeather4: function (data) {
     const { name } = data;
     const { icon, description } = data.weather[0];
-    const { temp, pressure, humidity } = data.main;
+    const { temp, pressure, humidity, temp_min, temp_max } = data.main;
     const { speed } = data.wind;
     document.querySelector(".cidade4").innerText = name;
     document.querySelector(".icon4").src = "https://openweathermap.org/img/wn/" + icon + ".png";
     document.querySelector(".descricao4").innerText = description;
-    document.querySelector(".temperatura4").innerText = temp + "°C";
+    document.querySelector(".temperatura4").innerText = "Temperatura atual: " +  temp + "°C";
+    document.querySelector(".minimo4").innerText = "Temperatura mínima: " +  temp_min + "°C";
+    document.querySelector(".maximo4").innerText = "Temperatura máxima: " +  temp_max + "°C";
     document.querySelector(".humidade4").innerText = "Humidade: " + humidity + "%";
     document.querySelector(".vento4").innerText = "Vento: " + speed + " km/h";
     document.querySelector(".pressao4").innerHTML = "Pressão Atmosférica: " + pressure + "hPa";
@@ -144,12 +152,14 @@ let weather = {
   displayWeather5: function (data) {
     const { name } = data;
     const { icon, description } = data.weather[0];
-    const { temp, pressure, humidity } = data.main;
+    const { temp, pressure, humidity, temp_min, temp_max } = data.main;
     const { speed } = data.wind;
     document.querySelector(".cidade5").innerText = name;
     document.querySelector(".icon5").src = "https://openweathermap.org/img/wn/" + icon + ".png";
     document.querySelector(".descricao5").innerText = description;
-    document.querySelector(".temperatura5").innerText = temp + "°C";
+    document.querySelector(".temperatura5").innerText = "Temperatura atual: " +  temp + "°C";
+    document.querySelector(".minimo5").innerText = "Temperatura mínima: " +  temp_min + "°C";
+    document.querySelector(".maximo5").innerText = "Temperatura máxima: " +  temp_max + "°C";
     document.querySelector(".humidade5").innerText = "Humidade: " + humidity + "%";
     document.querySelector(".vento5").innerText = "Vento: " + speed + " km/h";
     document.querySelector(".pressao5").innerHTML = "Pressão Atmosférica: " + pressure + "hPa";
@@ -158,12 +168,14 @@ let weather = {
   displayWeather6: function (data) {
     const { name } = data;
     const { icon, description } = data.weather[0];
-    const { temp, pressure, humidity } = data.main;
-    const { speed } = data.wind;
+    const { temp, pressure, humidity, temp_min, temp_max } = data.main;
+      const { speed } = data.wind;
     document.querySelector(".cidade6").innerText = name;
     document.querySelector(".icon6").src = "https://openweathermap.org/img/wn/" + icon + ".png";
     document.querySelector(".descricao6").innerText = description;
-    document.querySelector(".temperatura6").innerText = temp + "°C";
+    document.querySelector(".temperatura6").innerText = "Temperatura atual: " +  temp + "°C";
+    document.querySelector(".minimo6").innerText = "Temperatura mínima: " +  temp_min + "°C";
+    document.querySelector(".maximo6 ").innerText = "Temperatura máxima: " +  temp_max + "°C";
     document.querySelector(".humidade6").innerText = "Humidade: " + humidity + "%";
     document.querySelector(".vento6").innerText = "Vento: " + speed + " km/h";
     document.querySelector(".pressao6").innerHTML = "Pressão Atmosférica: " + pressure + "hPa";
