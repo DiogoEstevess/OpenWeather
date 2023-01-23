@@ -38,6 +38,7 @@
 function Obter_Cidade() {
   alert("Estou aqui..........");
   var cidade = document.getElementById('barra_pesquisa'); /*$('barra_pesquisa').val();*/
+  document.getElementById('cidade').style.visibility = "visible";
 
   alert("A cidade inserida foi: " + cidade.value);
 
