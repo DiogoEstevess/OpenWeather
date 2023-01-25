@@ -7,7 +7,7 @@ function Obter_Cidade() {
 
     fetchWeather: function (city) {
       fetch(
-        "https://api.openweathermap.org/data/2.5/weather?q=Leiria&units=metric&appid=" + this.apiKey + "&lang=pt"
+        "https://api.openweathermap.org/data/2.5/weather?q="+ cidade.value+"&units=metric&appid=" + this.apiKey + "&lang=pt"
       )
         .then((response) => {
           if (!response.ok) {
