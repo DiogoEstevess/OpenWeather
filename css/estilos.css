@@ -17,7 +17,8 @@ h1,h2{
     text-align: center;    
 }
 
-.quadrado{
+
+.quadrado, .quadrado2, .quadrado3, .quadrado4, .quadrado5{
     background-color: #a4a5a6;
     width: 320px;
     padding: 20px;
