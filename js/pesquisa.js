@@ -22,7 +22,6 @@ function Obter_Cidade() {
     },
 
     displayWeather: function (data) {
-      const { dt_txt } = data;
       const { lat, lon } = data.coord;
       const { name } = data;
       const { icon, description } = data.weather[0];
