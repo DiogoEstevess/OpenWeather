@@ -65,7 +65,7 @@ let weather = {
 
     let temp = document.createElement('div');
     temp.setAttribute('class', 'temperatura');
-    temp.innerText = data.main.temp + "ºC";
+    temp.innerText = "Temperatura: " + data.main.temp + "ºC";
     quadrado.appendChild(temp);
 
     let latitude = document.createElement('div');
