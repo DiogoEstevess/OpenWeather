@@ -22,12 +22,16 @@ function Obter_Cidade() {
     },
 
     displayWeather: function (data) {
+      const { lat, lon } = data.coord;
       const { name } = data;
       const { icon, description } = data.weather[0];
       const { temp, pressure, humidity } = data.main;
       const { speed } = data.wind;
+
       document.querySelector(".cidade").innerText = name;
       document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
+      document.querySelector(".latitude").innerText = "Latitude: " + lat;
+      document.querySelector(".longitude").innerText = "Longitude: " + lon;
       document.querySelector(".descricao").innerText = description;
       document.querySelector(".temperatura").innerText = temp + "°C";
       document.querySelector(".humidade").innerText = "Humidade: " + humidity + "%";
@@ -48,7 +52,7 @@ function Obter_Cidade() {
     },
 
     displayForecast: function (data) {
-      for (i = 8, j = 2; i < data.list.length; i += 8, j++) {
+      for (i = 8, j = 2; i <= data.list.length; i += 8, j++) {
         document.querySelector('.quadrado' + j).innerHTML = '';
 
         let flex = document.createElement('div');
@@ -57,34 +61,56 @@ function Obter_Cidade() {
 
         let img = document.createElement('img');
         img.setAttribute('class', 'icon');
-        img.src = "https://openweathermap.org/img/wn/" + data.list[i].weather[0].icon + ".png";
+        if (i == 40) {
+          img.src = "https://openweathermap.org/img/wn/" + data.list[i - 1].weather[0].icon + ".png";
+        } else {
+          img.src = "https://openweathermap.org/img/wn/" + data.list[i].weather[0].icon + ".png";
+        }
         flex.appendChild(img);
-
-        navigator.geolocation.getCurrentPosition
 
         let desc = document.createElement('div');
         desc.setAttribute('class', 'descricao');
-        desc.innerText = data.list[i].weather[0].description;
+        if (i == 40) {
+          desc.innerText = data.list[i - 1].weather[0].description;
+        } else {
+          desc.innerText = data.list[i].weather[0].description;
+        }
         flex.appendChild(desc);
 
         let temp = document.createElement('div');
         temp.setAttribute('class', 'temperatura');
-        temp.innerText = data.list[i].main.temp + "ºC";
+        if (i == 40) {
+          temp.innerText = data.list[i - 1].main.temp + "ºC";
+        } else {
+          temp.innerText = data.list[i].main.temp + "ºC";
+        }
         document.querySelector('.quadrado' + j).appendChild(temp);
 
         let press = document.createElement('div');
         press.setAttribute('class', 'pressao');
-        press.innerText = "Pressão Atmosférica: " + data.list[i].main.pressure + "hPa";
+        if (i == 40) {
+          press.innerText = "Pressão Atmosférica: " + data.list[i - 1].main.pressure + "hPa";
+        } else {
+          press.innerText = "Pressão Atmosférica: " + data.list[i].main.pressure + "hPa";
+        }
         document.querySelector('.quadrado' + j).appendChild(press);
 
         let hum = document.createElement('div');
         hum.setAttribute('class', 'humidade');
-        hum.innerText = "Humidade: " + data.list[i].main.humidity + "%";
+        if (i == 40) {
+          hum.innerText = "Humidade: " + data.list[i - 1].main.humidity + "%";
+        } else {
+          hum.innerText = "Humidade: " + data.list[i].main.humidity + "%";
+        }
         document.querySelector('.quadrado' + j).appendChild(hum);
 
         let vento = document.createElement('div');
         vento.setAttribute('class', 'vento');
-        vento.innerText = "Vento: " + data.list[i].wind.speed;
+        if (i == 40) {
+          vento.innerText = "Vento: " + data.list[i - 1].wind.speed;
+        } else {
+          vento.innerText = "Vento: " + data.list[i].wind.speed;
+        }
         document.querySelector('.quadrado' + j).appendChild(vento);
       }
     }
@@ -106,13 +132,17 @@ function Localizacao() {
 }
 
 function displayWeather2(data) {
+  const { lat, lon } = data.coord;
   const { name } = data;
   const { icon, description } = data.weather[0];
   const { temp, pressure, humidity } = data.main;
   const { speed } = data.wind;
+
   document.querySelector(".cidade1").innerText = name;
   document.querySelector(".icon1").src = "https://openweathermap.org/img/wn/" + icon + ".png";
   document.querySelector(".descricao1").innerText = description;
+  document.querySelector(".latitude1").innerText = "Latitude: " + lat;
+  document.querySelector(".longitude1").innerText = "Longitude: " + lon;
   document.querySelector(".temperatura1").innerText = temp + "°C";
   document.querySelector(".humidade1").innerText = "Humidade: " + humidity + "%";
   document.querySelector(".vento1").innerText = "Vento: " + speed + " km/h";
