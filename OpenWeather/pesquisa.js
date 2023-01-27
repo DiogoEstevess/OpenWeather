@@ -73,7 +73,7 @@ function Obter_Cidade() {
 
           let data_hora2 = document.createElement('div');
           data_hora2.setAttribute('class', 'data_hora');
-          data_hora2.innerText = data.list[k].dt_txt;
+          data_hora2.innerText = new Date(data.list[k].dt * 1000).toLocaleDateString('pt-pt', {day: 'numeric', month: 'short', hour: 'numeric', minute: 'numeric'});
           document.querySelector('.quadrado' + y).appendChild(data_hora2);
 
           let temp2 = document.createElement('div');
@@ -123,9 +123,9 @@ function Obter_Cidade() {
         let data_hora = document.createElement('div');
         data_hora.setAttribute('class', 'data_hora');
         if (i == 40) {
-          data_hora.innerText = data.list[i - 1].dt_txt;
+          data_hora.innerText = new Date(data.list[i - 1].dt * 1000).toLocaleDateString('pt-pt', {weekday: 'long', day: 'numeric', month: 'short'});
         } else {
-          data_hora.innerText = data.list[i].dt_txt;
+          data_hora.innerText = new Date(data.list[i].dt * 1000).toLocaleDateString('pt-pt', {weekday: 'long', day: 'numeric', month: 'short'});
         }
         document.querySelector('.quadrado' + j).appendChild(data_hora);
 
