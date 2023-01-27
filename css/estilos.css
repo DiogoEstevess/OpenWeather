@@ -70,13 +70,15 @@ tr {
     visibility: hidden;
 }
 
-.img {
+#botao{
     padding-left: 110px;
+}
+
+.img {
     position: absolute;
 }
 
 .hover_img {
-    padding-left: 110px;
     position: absolute;
     top: 0;
     left: 0;
