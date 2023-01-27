@@ -26,8 +26,10 @@ let weather = {
           break;
       }
       fetch(
+        //vai buscar o código da API com os dados inseridos
         "https://api.openweathermap.org/data/2.5/weather?q=" + cidade + "&units=imperial&appid=" + this.apiKey + "&lang=pt"
       )
+        //se a cidade for inválida
         .then((response) => {
           if (!response.ok) {
             alert("No weather found.");
@@ -35,13 +37,18 @@ let weather = {
           }
           return response.json();
         })
+        //se a cidade existir
         .then((data) => this.displayWeather(data));
     }
   },
 
+  //vai criar o código para mostrar cada cidade
   displayWeather: function (data) {
+    //cria o elemento desejado
     let quadrado = document.createElement('div');
+    //define os atributos ao elemento criado
     quadrado.setAttribute('class', 'quadrado');
+    //define onde o elemento cria se vai fixar no código HTML
     document.querySelector('.row').appendChild(quadrado);
 
     let nome = document.createElement('h2');
@@ -65,7 +72,7 @@ let weather = {
 
     let temp = document.createElement('div');
     temp.setAttribute('class', 'temperatura');
-    temp.innerText = "Temperatura: " + data.main.temp + "ºF";
+    temp.innerText = "Temperatura: "+data.main.temp + "ºF";
     quadrado.appendChild(temp);
 
     let latitude = document.createElement('div');
@@ -95,4 +102,5 @@ let weather = {
   },
 };
 
+//corre automaticamente o script todo
 weather.fetchWeather()
