@@ -27,7 +27,7 @@ let weather = {
       }
       fetch(
         //vai buscar o código da API com os dados inseridos
-        "https://api.openweathermap.org/data/2.5/weather?q=" + cidade + "&units=imperial&appid=" + this.apiKey + "&lang=pt"
+        "https://api.openweathermap.org/data/2.5/weather?q=" + cidade + "&units=imperial&appid=" + this.apiKey + "&lang=en-us"
       )
         //se a cidade for inválida
         .then((response) => {
@@ -72,7 +72,7 @@ let weather = {
 
     let temp = document.createElement('div');
     temp.setAttribute('class', 'temperatura');
-    temp.innerText = "Temperatura: "+data.main.temp + "ºF";
+    temp.innerText = "Temperature: "+data.main.temp + "ºF";
     quadrado.appendChild(temp);
 
     let latitude = document.createElement('div');
@@ -87,17 +87,17 @@ let weather = {
 
     let press = document.createElement('div');
     press.setAttribute('class', 'pressao');
-    press.innerText = "Pressão Atmosférica: " + data.main.pressure + "hPa";
+    press.innerText = "Atmospheric Pressure: " + data.main.pressure + "hPa";
     quadrado.appendChild(press);
 
     let hum = document.createElement('div');
     hum.setAttribute('class', 'humidade');
-    hum.innerText = "Humidade: " + data.main.humidity + "%";
+    hum.innerText = "Humidty: " + data.main.humidity + "%";
     quadrado.appendChild(hum);
 
     let vento = document.createElement('div');
     vento.setAttribute('class', 'vento');
-    vento.innerText = "Vento: " + data.wind.speed;
+    vento.innerText = "Wind: " + data.wind.speed + " mp/h";
     quadrado.appendChild(vento);
   },
 };

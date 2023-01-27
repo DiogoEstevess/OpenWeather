@@ -97,7 +97,7 @@ let weather = {
 
     let vento = document.createElement('div');
     vento.setAttribute('class', 'vento');
-    vento.innerText = "Vento: " + data.wind.speed;
+    vento.innerText = "Vento: " + data.wind.speed + " m/s";
     quadrado.appendChild(vento);
   },
 };

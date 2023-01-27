@@ -21,17 +21,16 @@
                     <a href="index2.html"><img src="../imgs/icon.png" alt="icon"> </a>
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
                     <form class="flex">
-                    <a href="pesquisa.html" class="btn btn-primary me-2" type="submit">Cº/Fº</a>
-                    <a href="favoritos.html" class="btn btn-primary me-2">Favoritos</a>
+                        <a href="pesquisa.html" class="btn btn-primary me-2" type="submit">Fº/Cº</a>
+                        <a href="favoritos.html" class="btn btn-primary me-2">Favorites</a>
                         <input class="form-control me-2 pesquisa" id="barra_pesquisa" value="Leiria">
                     </form>
-                    <button class="btn btn-outline-success" onclick="Obter_Cidade()"
-                        id="button_search">Pesquisar</button>
+                    <button class="btn btn-outline-success" onclick="Obter_Cidade()" id="button_search">Search</button>
                 </div>
             </div>
         </nav>
         <div class="row" id="cidade2">
-            <h1>Temperatura atual na sua Localização</h1>
+            <h1>Temperature in your Location</h1>
             <div class="quadrado">
                 <h2 class="cidade1"></h2>
                 <div class="flex">
@@ -44,13 +43,10 @@
                 <div class="pressao1"></div>
                 <div class="humidade1"></div>
                 <div class="vento1"></div>
-                <!-- <button class="btn" type="submit">
-                    <img src="../imgs/estrela.png " alt="">
-                </button> -->
             </div>
         </div>
         <div class="row" id="cidade">
-            <h1>Temperatura atual</h1>
+            <h1>Temperature</h1>
             <div class="quadrado">
                 <h2 class="cidade"></h2>
                 <div class="flex">
@@ -63,14 +59,11 @@
                 <div class="pressao"></div>
                 <div class="humidade"></div>
                 <div class="vento"></div>
-                <!-- <button class="btn" type="submit">
-                    <img src="../imgs/estrela.png " alt="">
-                </button> -->
             </div>
 
             <div></div>
 
-            <h1>Temperatura nas próximas horas</h1>
+            <h1>Temperature in the next few hours</h1>
 
             <div class="quadrado7"></div>
 
@@ -80,9 +73,9 @@
 
             <div class="quadrado10"></div>
 
-            <div class="quadrado11"></div> 
+            <div class="quadrado11"></div>
 
-            <h1>Temperatura dos próximos 5 dias</h1>
+            <h1>Temperature in the next 5 days</h1>
 
             <div class="quadrado2"></div>
 
@@ -92,17 +85,17 @@
 
             <div class="quadrado5"></div>
 
-            <div class="quadrado6"></div>            
+            <div class="quadrado6"></div>
         </div>
 
-        
+
         <script>
             var input = document.getElementById("barra_pesquisa");
-            input.addEventListener("keypress", function(event) {
-              if (event.key === "Enter") {
-                event.preventDefault();
-                document.getElementById("button_search").click();
-              }
+            input.addEventListener("keypress", function (event) {
+                if (event.key === "Enter") {
+                    event.preventDefault();
+                    document.getElementById("button_search").click();
+                }
             });
         </script>
 

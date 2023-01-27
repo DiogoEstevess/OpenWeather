@@ -15,8 +15,8 @@ function Obter_Cidade() {
         //se a cidade for inválida
         .then((response) => {
           if (!response.ok) {
-            alert("...Cidade não encontrada...");
-            throw new Error("...Cidade não encontrada...");
+            alert("...City Not Found...");
+            throw new Error("...City Not Found...");
           }
           return response.json();
         })
@@ -38,10 +38,10 @@ function Obter_Cidade() {
       document.querySelector(".latitude").innerText = "Latitude: " + lat;
       document.querySelector(".longitude").innerText = "Longitude: " + lon;
       document.querySelector(".descricao").innerText = description;
-      document.querySelector(".temperatura").innerText = "Temperatura: " + temp + "°F";
-      document.querySelector(".humidade").innerText = "Humidade: " + humidity + "%";
-      document.querySelector(".vento").innerText = "Vento: " + speed + " Mp/h";
-      document.querySelector(".pressao").innerHTML = "Pressão Atmosférica: " + pressure + "hPa";
+      document.querySelector(".temperatura").innerText = "Temperature: " + temp + "°F";
+      document.querySelector(".humidade").innerText = "Humidity: " + humidity + "%";
+      document.querySelector(".vento").innerText = "Wind: " + speed + " mp/h";
+      document.querySelector(".pressao").innerHTML = "Atmospheric Pressure: " + pressure + "hPa";
     },
   };
 
@@ -89,22 +89,22 @@ function Obter_Cidade() {
 
           let temp2 = document.createElement('div');
           temp2.setAttribute('class', 'temperatura');
-          temp2.innerText = "Temperatura: " + data.list[k].main.temp + "ºF";
+          temp2.innerText = "Temperature: " + data.list[k].main.temp + "ºF";
           document.querySelector('.quadrado' + y).appendChild(temp2);
 
           let press2 = document.createElement('div');
           press2.setAttribute('class', 'pressao');
-          press2.innerText = "Pressão Atmosférica: " + data.list[k].main.pressure + "hPa";
+          press2.innerText = "Atmospheric Pressure: " + data.list[k].main.pressure + "hPa";
           document.querySelector('.quadrado' + y).appendChild(press2);
 
           let hum2 = document.createElement('div');
           hum2.setAttribute('class', 'humidade');
-          hum2.innerText = "Humidade: " + data.list[k].main.humidity + "%";
+          hum2.innerText = "Humidity: " + data.list[k].main.humidity + "%";
           document.querySelector('.quadrado' + y).appendChild(hum2);
 
           let vento2 = document.createElement('div');
           vento2.setAttribute('class', 'vento');
-          vento2.innerText = "Vento: " + data.list[k].wind.speed + " mp/h";
+          vento2.innerText = "Wind: " + data.list[k].wind.speed + " mp/h";
           document.querySelector('.quadrado' + y).appendChild(vento2);
         }
         //limpar o código HTML existente naquele setor
@@ -148,45 +148,45 @@ function Obter_Cidade() {
         let temp_min = document.createElement('div');
         temp_min.setAttribute('class', 'temperatura');
         if (i == 40) {
-          temp_min.innerText = "Temperatura Mínima: " + data.list[i - 1].main.temp_min + "ºF";
+          temp_min.innerText = "Minimum Temperature: " + data.list[i - 1].main.temp_min + "ºF";
         } else {
-          temp_min.innerText = "Temperatura Mínima: " + data.list[i].main.temp_min + "ºF";
+          temp_min.innerText = "Minimum Temperature: " + data.list[i].main.temp_min + "ºF";
         }
         document.querySelector('.quadrado' + j).appendChild(temp_min);
 
         let temp_max = document.createElement('div');
         temp_max.setAttribute('class', 'temperatura');
         if (i == 40) {
-          temp_max.innerText = "Temperatura Máxima: " + data.list[i - 1].main.temp_max + "ºF";
+          temp_max.innerText = "Maximum Temperature: " + data.list[i - 1].main.temp_max + "ºF";
         } else {
-          temp_max.innerText = "Temperatura Máxima: " + data.list[i].main.temp_max + "ºF";
+          temp_max.innerText = "Maximum Temperature: " + data.list[i].main.temp_max + "ºF";
         }
         document.querySelector('.quadrado' + j).appendChild(temp_max);
 
         let press = document.createElement('div');
         press.setAttribute('class', 'pressao');
         if (i == 40) {
-          press.innerText = "Pressão Atmosférica: " + data.list[i - 1].main.pressure + "hPa";
+          press.innerText = "Atmospheric Pressure: " + data.list[i - 1].main.pressure + "hPa";
         } else {
-          press.innerText = "Pressão Atmosférica: " + data.list[i].main.pressure + "hPa";
+          press.innerText = "Atmospheric Pressure: " + data.list[i].main.pressure + "hPa";
         }
         document.querySelector('.quadrado' + j).appendChild(press);
 
         let hum = document.createElement('div');
         hum.setAttribute('class', 'humidade');
         if (i == 40) {
-          hum.innerText = "Humidade: " + data.list[i - 1].main.humidity + "%";
+          hum.innerText = "Humidity: " + data.list[i - 1].main.humidity + "%";
         } else {
-          hum.innerText = "Humidade: " + data.list[i].main.humidity + "%";
+          hum.innerText = "Humidity: " + data.list[i].main.humidity + "%";
         }
         document.querySelector('.quadrado' + j).appendChild(hum);
 
         let vento = document.createElement('div');
         vento.setAttribute('class', 'vento');
         if (i == 40) {
-          vento.innerText = "Vento: " + data.list[i - 1].wind.speed + " mp/h";
+          vento.innerText = "Wind: " + data.list[i - 1].wind.speed + " mp/h";
         } else {
-          vento.innerText = "Vento: " + data.list[i].wind.speed + " mp/h";
+          vento.innerText = "Wind: " + data.list[i].wind.speed + " mp/h";
         }
         document.querySelector('.quadrado' + j).appendChild(vento);
       }
@@ -225,10 +225,10 @@ function displayWeather2(data) {
   document.querySelector(".descricao1").innerText = description;
   document.querySelector(".latitude1").innerText = "Latitude: " + lat;
   document.querySelector(".longitude1").innerText = "Longitude: " + lon;
-  document.querySelector(".temperatura1").innerText = "Temperatura: " + temp + "°F";
-  document.querySelector(".humidade1").innerText = "Humidade: " + humidity + "%";
-  document.querySelector(".vento1").innerText = "Vento: " + speed + " mp/h";
-  document.querySelector(".pressao1").innerText = "Pressão Atmosférica: " + pressure + "hPa";
+  document.querySelector(".temperatura1").innerText = "Temperature: " + temp + "°F";
+  document.querySelector(".humidade1").innerText = "Humidity: " + humidity + "%";
+  document.querySelector(".vento1").innerText = "Wind: " + speed + " mp/h";
+  document.querySelector(".pressao1").innerText = "Atmospheric Pressure: " + pressure + "hPa";
 }
 
 Localizacao();

@@ -40,7 +40,7 @@ function Obter_Cidade() {
       document.querySelector(".descricao").innerText = description;
       document.querySelector(".temperatura").innerText = "Temperatura: " + temp + "°C";
       document.querySelector(".humidade").innerText = "Humidade: " + humidity + "%";
-      document.querySelector(".vento").innerText = "Vento: " + speed + " km/h";
+      document.querySelector(".vento").innerText = "Vento: " + speed + " m/s";
       document.querySelector(".pressao").innerHTML = "Pressão Atmosférica: " + pressure + "hPa";
     },
   };
@@ -104,7 +104,7 @@ function Obter_Cidade() {
 
           let vento2 = document.createElement('div');
           vento2.setAttribute('class', 'vento');
-          vento2.innerText = "Vento: " + data.list[k].wind.speed + " km/h";
+          vento2.innerText = "Vento: " + data.list[k].wind.speed + " m/s";
           document.querySelector('.quadrado' + y).appendChild(vento2);
         }
         //limpar o código HTML existente naquele setor
@@ -184,9 +184,9 @@ function Obter_Cidade() {
         let vento = document.createElement('div');
         vento.setAttribute('class', 'vento');
         if (i == 40) {
-          vento.innerText = "Vento: " + data.list[i - 1].wind.speed + " km/h";
+          vento.innerText = "Vento: " + data.list[i - 1].wind.speed + " m/s";
         } else {
-          vento.innerText = "Vento: " + data.list[i].wind.speed + " km/h";
+          vento.innerText = "Vento: " + data.list[i].wind.speed + " m/s";
         }
         document.querySelector('.quadrado' + j).appendChild(vento);
       }
@@ -227,7 +227,7 @@ function displayWeather2(data) {
   document.querySelector(".longitude1").innerText = "Longitude: " + lon;
   document.querySelector(".temperatura1").innerText = "Temperatura: " + temp + "°C";
   document.querySelector(".humidade1").innerText = "Humidade: " + humidity + "%";
-  document.querySelector(".vento1").innerText = "Vento: " + speed + " km/h";
+  document.querySelector(".vento1").innerText = "Vento: " + speed + " m/s";
   document.querySelector(".pressao1").innerText = "Pressão Atmosférica: " + pressure + "hPa";
 }
 
