@@ -21,9 +21,9 @@
                     <a href="index.html"><img src="../imgs/icon.png" alt="icon"> </a>
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
                     <form class="flex">
-                    <a href="pesquisa2.html" class="btn btn-primary me-2" type="submit">Cº/Fº</a>
-                    <a href="favoritos.html" class="btn btn-primary me-2">Favoritos</a>
-                        <input class="form-control me-2 pesquisa" id="barra_pesquisa" placeholder="Leiria">
+                        <a href="pesquisa2.html" class="btn btn-primary me-2" type="submit">Cº/Fº</a>
+                        <a href="favoritos.html" class="btn btn-primary me-2">Favoritos</a>
+                        <input class="form-control me-2 pesquisa" id="barra_pesquisa" value="Leiria">
                     </form>
                     <button class="btn btn-outline-success" onclick="Obter_Cidade()"
                         id="button_search">Pesquisar</button>
@@ -59,10 +59,16 @@
                 <div class="longitude"></div>
                 <div class="pressao"></div>
                 <div class="humidade"></div>
-                <div class="vento"></div>
-                <button class="btn" onclick="Obter_Favorito()">
-                    <img src="../imgs/estrela.png " alt="">
-                </button>
+                <div class="flex">
+                    <div class="vento"></div>
+                    <button class="btn" id="botao" onclick="Obter_Favorito()">
+                        <div class="img">
+                            <img src="../imgs/estrela_vazia.png">
+                            <img src="../imgs/estrela.png " class="hover_img">
+                        </div>                        
+                    </button>
+                </div>
+
             </div>
 
             <div></div>
@@ -70,39 +76,29 @@
             <h1>Temperatura nas próximas horas</h1>
 
             <div class="quadrado7"></div>
-
             <div class="quadrado8"></div>
-
             <div class="quadrado9"></div>
-
             <div class="quadrado10"></div>
+            <div class="quadrado11"></div>
 
-            <div class="quadrado11"></div> 
-        
             <h1>Temperatura dos próximos 5 dias</h1>
 
             <div class="quadrado2"></div>
-
             <div class="quadrado3"></div>
-
             <div class="quadrado4"></div>
-
             <div class="quadrado5"></div>
-
-            <div class="quadrado6"></div>          
+            <div class="quadrado6"></div>
         </div>
 
-        
         <script>
             var input = document.getElementById("barra_pesquisa");
-            input.addEventListener("keypress", function(event) {
-              if (event.key === "Enter") {
-                event.preventDefault();
-                document.getElementById("button_search").click();
-              }
+            input.addEventListener("keypress", function (event) {
+                if (event.key === "Enter") {
+                    event.preventDefault();
+                    document.getElementById("button_search").click();
+                }
             });
         </script>
-
 </body>
 
 <footer class="rodape">

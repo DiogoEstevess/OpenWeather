@@ -129,14 +129,23 @@ function Obter_Cidade() {
         }
         document.querySelector('.quadrado' + j).appendChild(data_hora);
 
-        let temp = document.createElement('div');
-        temp.setAttribute('class', 'temperatura');
+        let temp_min = document.createElement('div');
+        temp_min.setAttribute('class', 'temperatura');
         if (i == 40) {
-          temp.innerText = "Temperatura: " + data.list[i - 1].main.temp + "ºC";
+          temp_min.innerText = "Temperatura Mínima: " + data.list[i - 1].main.temp_min + "ºC";
         } else {
-          temp.innerText = "Temperatura: " + data.list[i].main.temp + "ºC";
+          temp_min.innerText = "Temperatura Mínima: " + data.list[i].main.temp_min + "ºC";
         }
-        document.querySelector('.quadrado' + j).appendChild(temp);
+        document.querySelector('.quadrado' + j).appendChild(temp_min);
+
+        let temp_max = document.createElement('div');
+        temp_max.setAttribute('class', 'temperatura');
+        if (i == 40) {
+          temp_max.innerText = "Temperatura Máxima: " + data.list[i - 1].main.temp_max + "ºC";
+        } else {
+          temp_max.innerText = "Temperatura Máxima: " + data.list[i].main.temp_max + "ºC";
+        }
+        document.querySelector('.quadrado' + j).appendChild(temp_max);
 
         let press = document.createElement('div');
         press.setAttribute('class', 'pressao');
